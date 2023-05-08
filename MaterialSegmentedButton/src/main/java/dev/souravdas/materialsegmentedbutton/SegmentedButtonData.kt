@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
  */
 
 @Immutable
-class SegmentedButtonColors constructor(
+class SegmentedButtonColors internal constructor(
     private val containerColor: Color,
     private val contentColor: Color,
     private val outlineColor: Color,
@@ -72,19 +72,25 @@ object SegmentedButtonDefaults {
 
     fun segmentedButtonPadding(): PaddingValues = PaddingValues(4.dp)
 
-    fun segmentedButtonCorners(): SegmentedButtonCorners = SegmentedButtonCorners(
-        topStartPercentage = CORNER_DEFAULT,
-        topEndPercentage = CORNER_DEFAULT,
-        bottomStartPercentage = CORNER_DEFAULT,
-        bottomEndPercentage = CORNER_DEFAULT
+    fun segmentedButtonCorners(cornerValueInPercentage: Int = CORNER_DEFAULT): SegmentedButtonCorners = SegmentedButtonCorners(cornerValueInPercentage)
+    fun segmentedButtonCorners(
+        topStartPercentage: Int = CORNER_DEFAULT,
+        topEndPercentage: Int = CORNER_DEFAULT,
+        bottomStartPercentage: Int = CORNER_DEFAULT,
+        bottomEndPercentage: Int = CORNER_DEFAULT,
+    ): SegmentedButtonCorners = SegmentedButtonCorners(
+        topStartPercentage = topStartPercentage,
+        topEndPercentage = topEndPercentage,
+        bottomStartPercentage = bottomStartPercentage,
+        bottomEndPercentage = bottomEndPercentage
     )
 
 }
 
 
 class SegmentedButtonItem constructor(
-    val leadingIcon: @Composable () -> Unit,
-    val title: @Composable () -> Unit ={},
+    val leadingIcon: @Composable () -> Unit ={},
+    val title: @Composable () -> Unit,
     val onClick: () -> Unit
 )
 
@@ -94,14 +100,14 @@ class SegmentedButtonCorners {
     val bottomStartPercentage: Int
     val bottomEndPercentage: Int
 
-    constructor(topStartPercentage: Int, topEndPercentage: Int, bottomStartPercentage: Int, bottomEndPercentage: Int) {
+    internal constructor(topStartPercentage: Int, topEndPercentage: Int, bottomStartPercentage: Int, bottomEndPercentage: Int) {
         this.topStartPercentage = topStartPercentage
         this.topEndPercentage = topEndPercentage
         this.bottomStartPercentage = bottomStartPercentage
         this.bottomEndPercentage = bottomEndPercentage
     }
 
-    constructor(percentage: Int) {
+    internal constructor(percentage: Int) {
         this.topStartPercentage = percentage
         this.topEndPercentage = percentage
         this.bottomStartPercentage = percentage

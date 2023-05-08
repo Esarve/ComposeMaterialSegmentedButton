@@ -21,13 +21,13 @@ import androidx.compose.ui.zIndex
 
 @Composable
 fun SegmentedButton(
+    modifier: Modifier = Modifier,
     items: List<SegmentedButtonItem>,
     defaultSelectedItemIndex: Int = 0,
     buttonPadding: PaddingValues = SegmentedButtonDefaults.segmentedButtonPadding(),
     cornerRadius: SegmentedButtonCorners = SegmentedButtonDefaults.segmentedButtonCorners(),
     color: SegmentedButtonColors = SegmentedButtonDefaults.segmentedButtonColors(),
     showIconForSelectedOnly: Boolean = false,
-    modifier: Modifier = Modifier.fillMaxWidth(),
 ) {
     val selectedIndex = remember { mutableStateOf(defaultSelectedItemIndex) }
 
