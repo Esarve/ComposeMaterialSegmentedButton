@@ -25,7 +25,7 @@ Add this in your project level gradle file
 after that, add this dependency to your app level gradle file
 
 ```groovy
-  	implementation 'com.github.Esarve:MaterialSegmentedButton:release-version'
+implementation 'com.github.Esarve:MaterialSegmentedButton:release-version' 
 ```
 
 Current release version: 
