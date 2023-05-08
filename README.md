@@ -30,7 +30,6 @@ after that, add this dependency to your app level gradle file
 
 Current release version: 
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/Esarve/MaterialSegmentedButton)
 [![](https://jitpack.io/v/Esarve/MaterialSegmentedButton.svg)](https://jitpack.io/#Esarve/MaterialSegmentedButton)
 ## Usage
 
