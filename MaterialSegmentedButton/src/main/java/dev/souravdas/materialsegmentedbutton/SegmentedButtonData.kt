@@ -84,7 +84,8 @@ object SegmentedButtonDefaults {
 
 class SegmentedButtonItem constructor(
     val leadingIcon: @Composable () -> Unit,
-    val title: @Composable () -> Unit
+    val title: @Composable () -> Unit ={},
+    val onClick: () -> Unit
 )
 
 class SegmentedButtonCorners {

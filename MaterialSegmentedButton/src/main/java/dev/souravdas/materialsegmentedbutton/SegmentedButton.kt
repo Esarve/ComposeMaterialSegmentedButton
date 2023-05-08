@@ -28,7 +28,6 @@ fun SegmentedButton(
     color: SegmentedButtonColors = SegmentedButtonDefaults.segmentedButtonColors(),
     showIconForSelectedOnly: Boolean = false,
     modifier: Modifier = Modifier.fillMaxWidth(),
-    onItemSelection: (selectedItemIndex: Int) -> Unit,
 ) {
     val selectedIndex = remember { mutableStateOf(defaultSelectedItemIndex) }
 
@@ -55,7 +54,7 @@ fun SegmentedButton(
                 },
                 onClick = {
                     selectedIndex.value = index
-                    onItemSelection(selectedIndex.value)
+                    item.onClick.invoke()
                 },
                 shape = when (index) {
                     0 -> RoundedCornerShape(
