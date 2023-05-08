@@ -73,6 +73,8 @@ SegmentedButton(
 )
 ```
 
+check out this gist for more usage https://gist.github.com/Esarve/98f8baaa9b73540800fc208dc013dc60
+
 
 ## Acknowledgements
 
