@@ -70,7 +70,25 @@ val itemList = listOf(
 
 SegmentedButton(
     items = itemList,
+    modifier = Modifier
+        .fillMaxWidth()
+        .padding(horizontal = 8.dp, vertical = 32.dp)
 )
+```
+
+SegmentedButton with custom corner radius and colors
+
+```kotlin
+SegmentedButton{
+    item = itemList,
+    color = SegmentedButtonDefaults.segmentedButtonColors(
+         containerColor = MaterialTheme.colorScheme.tertiaryContainer,
+         selectedContainerColor = MaterialTheme.colorScheme.tertiary
+         //more arguments availabe here
+    ),
+    cornerRadius = SegmentedButtonDefaults.segmentedButtonCorners(40) //or you can individually mention each corners here
+    showIconForSelectedOnly = true // this keep the icon for selected item visible only
+}
 ```
 
 check out this gist for more usage https://gist.github.com/Esarve/98f8baaa9b73540800fc208dc013dc60
