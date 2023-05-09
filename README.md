@@ -14,12 +14,12 @@ Segmented Buttons for Jetpack Compose inspired by Google's Material 3 Design Gui
 Add this in your project level gradle file
 
 ```groovy
-  allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+    repositories {
+	...
+	maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
 after that, add this dependency to your app level gradle file
