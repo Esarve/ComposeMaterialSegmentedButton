@@ -1,6 +1,6 @@
 
-# Material Segmented Buttons
-Segmented Buttons inspired by Google's Material 3 Design Guideline with dynamic color support
+# Compose Material Segmented Buttons
+Segmented Buttons for Jetpack Compose inspired by Google's Material 3 Design Guideline with dynamic color support
 
 ## Screenshots
 
